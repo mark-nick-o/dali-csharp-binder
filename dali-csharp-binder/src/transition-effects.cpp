@@ -48,6 +48,28 @@ SWIGINTERN void Dali_Signal_Sl_void_Sp_Dali_Toolkit_CubeTransitionEffect_SP__Sg_
 extern "C" {
 #endif
 
+#define CALL_CATCH_EXCEPTION(ret)                                          \
+  catch (std::out_of_range & e)                                            \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_IndexError, const_cast<char *>(e.what()));   \
+    return ret;                                                            \
+  }                                                                        \
+  catch (std::exception & e)                                               \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_RuntimeError, const_cast<char *>(e.what())); \
+    return ret;                                                            \
+  }                                                                        \
+  catch (Dali::DaliException e)                                            \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_UnknownError, e.condition);                  \
+    return ret;                                                            \
+  }                                                                        \
+  catch (...)                                                              \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_UnknownError, "unknown error");              \
+    return ret;                                                            \
+  }
+  
 // cube-transition-effect.h
 
 SWIGEXPORT Dali::Toolkit::Control * SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_SWIGUpcast(Dali::Toolkit::CubeTransitionEffect *jarg1) {
@@ -58,29 +80,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Dali_new_CubeTransitionEffect() {
   Dali::Toolkit::CubeTransitionEffect* result;
 
   {
-    try {
+    try 
+	{
       result = new Dali::Toolkit::CubeTransitionEffect();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   return result;
@@ -91,29 +95,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_delete_CubeTransitionEffect(void * jarg1
 
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+	{
       delete arg1;
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -122,29 +108,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_SetTransitionDurati
 
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       (arg1)->SetTransitionDuration(duration);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -154,29 +122,11 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_GetTransitionDurat
   float result = 0.0f;
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       result = (arg1)->GetTransitionDuration();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   return result;
@@ -187,29 +137,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_SetCubeDisplacement
 
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       (arg1)->SetCubeDisplacement(displacement);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -219,33 +151,11 @@ SWIGEXPORT float SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_GetCubeDisplacemen
   float result = 0.0f;
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       result = (arg1)->GetCubeDisplacement();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-        return 0.0f;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-        return 0.0f;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-        return 0.0f;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-        return 0.0f;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   return result;
@@ -257,29 +167,11 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_IsTransitio
   bool result = false;
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       result = (arg1)->IsTransitioning();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return false;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return false;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return false;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return false;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   unsigned int jresult = result; // convert bool to unsigned int.
@@ -297,29 +189,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_SetCurrentTexture(v
   }
 
   {
-    try {
+    try 
+    {
       (arg1)->SetCurrentTexture(*argp2);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -334,29 +208,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_SetTargetTexture(vo
   }
 
   {
-    try {
+    try 
+    {
       (arg1)->SetTargetTexture(*argp2);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -367,29 +223,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_StartTransition__SW
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
 
   {
-    try {
+    try 
+    {
       (arg1)->StartTransition(toNextImage);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -411,29 +249,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_StartTransition__SW
   }
 
   {
-    try {
+    try 
+    {
       (arg1)->StartTransition(*argp2, *argp3);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -442,29 +262,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_PauseTransition(voi
 
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       (arg1)->PauseTransition();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -473,29 +275,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_ResumeTransition(vo
 
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       (arg1)->ResumeTransition();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -504,29 +288,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_StopTransition(void
 
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       (arg1)->StopTransition();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what()));
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition);
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error");
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -537,29 +303,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Dali_CubeTransitionEffect_TransitionComplet
 
   arg1 = (Dali::Toolkit::CubeTransitionEffect *)jarg1;
   {
-    try {
+    try 
+    {
       result = (Dali::Toolkit::CubeTransitionEffect::TransitionCompletedSignalType *) &(arg1)->TransitionCompletedSignal();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   jresult = (void *)result;
@@ -573,29 +321,11 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Dali_CubeTransitionEffectSignal_Empty
 
   arg1 = (Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > *)jarg1;
   {
-    try {
+    try 
+    {
       result = (bool)Dali_Signal_Sl_void_Sp_Dali_Toolkit_CubeTransitionEffect_SP__Sg__Empty((Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > const *)arg1);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   jresult = result;
@@ -610,29 +340,11 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_Dali_CubeTransitionEffectSignal_GetC
 
   arg1 = (Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > *)jarg1;
   {
-    try {
+    try 
+    {
       result = Dali_Signal_Sl_void_Sp_Dali_Toolkit_CubeTransitionEffect_SP__Sg__GetConnectionCount((Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > const *)arg1);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   jresult = (unsigned long)result;
@@ -647,29 +359,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffectSignal_Connect(void 
   arg1 = (Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > *)jarg1;
   arg2 = (void(*)(Dali::Toolkit::CubeTransitionEffect))jarg2;
   {
-    try {
+    try 
+    {
       Dali_Signal_Sl_void_Sp_Dali_Toolkit_CubeTransitionEffect_SP__Sg__Connect(arg1, arg2);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
 }
@@ -682,29 +376,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffectSignal_Disconnect(vo
   arg1 = (Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > *)jarg1;
   arg2 = (void(*)(Dali::Toolkit::CubeTransitionEffect))jarg2;
   {
-    try {
+    try 
+    {
       Dali_Signal_Sl_void_Sp_Dali_Toolkit_CubeTransitionEffect_SP__Sg__Disconnect(arg1, arg2);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
 }
@@ -723,29 +399,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_CubeTransitionEffectSignal_Emit(void * j
   }
   arg2 = *argp2;
   {
-    try {
+    try 
+    {
       Dali_Signal_Sl_void_Sp_Dali_Toolkit_CubeTransitionEffect_SP__Sg__Emit(arg1, arg2);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
 }
@@ -756,29 +414,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Dali_new_CubeTransitionEffectSignal() {
   Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > *result = 0;
 
   {
-    try {
+    try 
+    {
       result = (Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > *)new Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) >();
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   jresult = (void *)result;
@@ -791,29 +431,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_delete_CubeTransitionEffectSignal(void *
 
   arg1 = (Dali::Signal< void(Dali::Toolkit::CubeTransitionEffect) > *)jarg1;
   {
-    try {
+    try 
+    {
       delete arg1;
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
 }
@@ -830,29 +452,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Dali_CubeTransitionCrossEffect_New(unsigned
   Dali::Toolkit::CubeTransitionEffect result;
 
   {
-    try {
+    try 
+    {
       result = Dali::Toolkit::CubeTransitionCrossEffect::New(numRows, numColumns);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   jresult = new Dali::Toolkit::CubeTransitionCrossEffect((const Dali::Toolkit::CubeTransitionCrossEffect &)result);
@@ -865,29 +469,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_delete_CubeTransitionCrossEffect(void * 
 
   arg1 = (Dali::Toolkit::CubeTransitionCrossEffect *)jarg1;
   {
-    try {
+    try 
+    {
       delete arg1;
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -902,29 +488,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Dali_CubeTransitionFoldEffect_New(unsigned 
   Dali::Toolkit::CubeTransitionEffect result;
 
   {
-    try {
+    try 
+    {
       result = Dali::Toolkit::CubeTransitionFoldEffect::New(numRows, numColumns);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   jresult = new Dali::Toolkit::CubeTransitionFoldEffect((const Dali::Toolkit::CubeTransitionFoldEffect &)result);
@@ -937,29 +505,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_delete_CubeTransitionFoldEffect(void * j
 
   arg1 = (Dali::Toolkit::CubeTransitionFoldEffect *)jarg1;
   {
-    try {
+    try 
+    {
       delete arg1;
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
@@ -974,29 +524,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Dali_CubeTransitionWaveEffect_New(unsigned 
   Dali::Toolkit::CubeTransitionEffect result;
 
   {
-    try {
+    try 
+    {
       result = Dali::Toolkit::CubeTransitionWaveEffect::New(numRows, numColumns);
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 
   jresult = new Dali::Toolkit::CubeTransitionWaveEffect((const Dali::Toolkit::CubeTransitionWaveEffect &)result);
@@ -1009,29 +541,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_delete_CubeTransitionWaveEffect(void * j
 
   arg1 = (Dali::Toolkit::CubeTransitionWaveEffect *)jarg1;
   {
-    try {
+    try 
+    {
       delete arg1;
     }
-    catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return;
-      };
-    }
-    catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return;
-      };
-    }
-    catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return;
-      };
-    }
+    CALL_CATCH_EXCEPTION(0);
   }
 }
 
