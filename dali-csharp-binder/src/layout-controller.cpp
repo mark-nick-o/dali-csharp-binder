@@ -22,6 +22,28 @@
 extern "C" {
 #endif
 
+#define CALL_CATCH_EXCEPTION(ret)                                          \
+  catch (std::out_of_range & e)                                            \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_IndexError, const_cast<char *>(e.what()));   \
+    return ret;                                                            \
+  }                                                                        \
+  catch (std::exception & e)                                               \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_RuntimeError, const_cast<char *>(e.what())); \
+    return ret;                                                            \
+  }                                                                        \
+  catch (Dali::DaliException e)                                            \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_UnknownError, e.condition);                  \
+    return ret;                                                            \
+  }                                                                        \
+  catch (...)                                                              \
+  {                                                                        \
+    SWIG_CSharpException(SWIG_UnknownError, "unknown error");              \
+    return ret;                                                            \
+  }
+  
 namespace
 {
 static int gLayoutControllerId = 1;
@@ -64,25 +86,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Dali_new_LayoutController() {
   LayoutController *result = 0 ;
 
   {
-    try {
+    try 
+    {
       result = (LayoutController *)new LayoutController();
-    } catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return 0;
-      };
-    } catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return 0;
-      };
-    } catch (Dali::DaliException e) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, e.condition); return 0;
-      };
-    } catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return 0;
-      };
-    }
+    } 
+    CALL_CATCH_EXCEPTION(0);
   }
 
   return (void *)result;
@@ -92,21 +100,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Dali_delete_LayoutController(void * jarg1) {
 
   LayoutController * arg1 = (LayoutController *)jarg1;
   {
-    try {
+    try 
+    {
       delete arg1;
-    } catch (std::out_of_range& e) {
-      {
-        SWIG_CSharpException(SWIG_IndexError, const_cast<char*>(e.what())); return ;
-      };
-    } catch (std::exception& e) {
-      {
-        SWIG_CSharpException(SWIG_RuntimeError, const_cast<char*>(e.what())); return ;
-      };
-    } catch (...) {
-      {
-        SWIG_CSharpException(SWIG_UnknownError, "unknown error"); return ;
-      };
-    }
+    } 
+    CALL_CATCH_EXCEPTION(0);	
   }
 }
 
